@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+  overflow-y: hidden;
+
+  background: rgb(23, 24, 23);
+  color: rgb(75, 201, 106);
+
+  font-family: "Inter", sans-serif;
+}
+
+canvas {
+  border: 3px solid rgb(75, 201, 106);
+}
+
+span#itemTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  background: rgb(75, 201, 106);
+  border: 2px solid rgb(38, 105, 55);
+  color: rgb(75, 75, 75);
+
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
