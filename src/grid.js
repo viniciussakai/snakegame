@@ -71,8 +71,4 @@ export default class Grid {
 
     this.changeItem({ row, col, item: "f" });
   }
-
-  show() {
-    console.table(this.grid);
-  }
 }

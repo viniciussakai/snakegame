@@ -16,8 +16,9 @@ export default class Snake {
     y: 1,
   };
 
-  constructor(grid) {
+  constructor(grid, audio) {
     this.grid = grid;
+    this.audio = audio;
   }
 
   checkCollision() {
@@ -44,13 +45,13 @@ export default class Snake {
       this.grid.generateFood();
 
       this.body.push({ x: this.tail.x, y: this.tail.y });
-      console.log(this.body);
+      this.audio.playFood();
     }
   }
 
   update() {
     if (this.checkCollision()) {
-      console.log("Game over");
+      this.audio.playDies();
       return true;
     }
 

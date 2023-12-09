@@ -1,12 +1,14 @@
+import AudioController from "./audio";
 import Grid from "./grid";
-import Snake from "./snake";
 import Input from "./input";
+import Snake from "./snake";
 
 const canva = document.getElementById("gameCanvas");
 const ctx = canva.getContext("2d");
 
 const grid = new Grid({ rows: 20, collums: 20 });
-const snake = new Snake(grid);
+const audioController = new AudioController();
+const snake = new Snake(grid, audioController);
 
 const score = document.getElementById("score");
 const button = document.getElementById("restartButton");
@@ -30,8 +32,6 @@ const gameLoop = setInterval(() => {
     clearInterval(gameLoop);
     onGameOver();
   }
-
-  console.log(gameOver);
 }, 10000 / 60);
 
 const onGameOver = () => {
